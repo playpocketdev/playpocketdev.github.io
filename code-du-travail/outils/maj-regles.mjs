@@ -5,12 +5,15 @@
 //    et de l'URSSAF (modele-social).
 // 2. Les fait tourner avec EXACTEMENT les moteurs de calcul embarqués dans l'appli (versions figées
 //    dans package.json) : si elles ne fonctionnent pas avec eux, rien n'est publié.
-// 3. Si tout passe, écrit les fichiers dans ../regles/ ; le workflow les publie.
+// 3. Récupère aussi les fiches pratiques du ministère du Travail (@socialgouv/fiches-travail-data).
+// 4. Si tout passe, écrit les fichiers dans ../regles/ ; le workflow les publie.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createRequire } from 'node:module';
+
+import { fichesAppli } from './fiches.mjs';
 
 const require = createRequire(import.meta.url);
 const ms = require('@socialgouv/modeles-social');
@@ -54,9 +57,10 @@ const echec = (message) => {
 // ---------- 1. Dernières versions ----------
 const ministere = await derniere('@socialgouv/modeles-social');
 const urssaf = await derniere('modele-social');
+const fichesTravail = await derniere('@socialgouv/fiches-travail-data');
 const actuel = existsSync(new URL('version.json', SORTIE)) ? JSON.parse(readFileSync(new URL('version.json', SORTIE), 'utf8')) : null;
-console.log(`Ministère du Travail ${ministere.version}, URSSAF ${urssaf.version}`);
-if (actuel && actuel.sources.ministere === ministere.version && actuel.sources.urssaf === urssaf.version) {
+console.log(`Ministère du Travail ${ministere.version}, URSSAF ${urssaf.version}, fiches ${fichesTravail.version}`);
+if (actuel && actuel.sources.ministere === ministere.version && actuel.sources.urssaf === urssaf.version && actuel.sources.fiches === fichesTravail.version) {
   console.log('Règles déjà à jour : rien à publier.');
   process.exit(0);
 }
@@ -163,20 +167,24 @@ try {
 } catch (e) {
   problemes.push(`URSSAF : ${e.message.slice(0, 160)}`);
 }
-console.log(`${essais} calculs essayés, ${problemes.length} problème(s).`);
+// Fiches pratiques : nettoyées comme dans l'appli, et assez nombreuses pour être complètes.
+const fiches = fichesAppli(await (await fetch(`https://unpkg.com/@socialgouv/fiches-travail-data@${fichesTravail.version}/data/fiches-travail.json`)).json());
+if (fiches.length < 100 || !fiches.every((f) => f.titre && f.sections.length)) problemes.push(`fiches : seulement ${fiches.length} fiches valides`);
+console.log(`${essais} calculs essayés, ${fiches.length} fiches, ${problemes.length} problème(s).`);
 if (problemes.length) echec(`les nouvelles règles ne passent pas les vérifications :\n- ${problemes.join('\n- ')}`);
 
 // ---------- 4. Publication ----------
 const jour = new Date().toISOString().slice(0, 10);
 const [a, m, j] = jour.split('-');
-const fichiers = { calculateurs: `calculateurs-${ministere.version}.json`, urssaf: `urssaf-${urssaf.version}.json` };
+const fichiers = { calculateurs: `calculateurs-${ministere.version}.json`, urssaf: `urssaf-${urssaf.version}.json`, fiches: `fiches-${fichesTravail.version}.json` };
 mkdirSync(SORTIE, { recursive: true });
 for (const f of readdirSync(SORTIE)) if (f.endsWith('.json')) rmSync(new URL(f, SORTIE));
 writeFileSync(new URL(fichiers.calculateurs, SORTIE), JSON.stringify(calculateurs));
 writeFileSync(new URL(fichiers.urssaf, SORTIE), JSON.stringify(reglesUrssaf));
+writeFileSync(new URL(fichiers.fiches, SORTIE), JSON.stringify(fiches));
 writeFileSync(
   new URL('version.json', SORTIE),
-  JSON.stringify({ version: `du ${j}/${m}/${a}`, programmeMin: PROGRAMME, sources: { ministere: ministere.version, urssaf: urssaf.version }, fichiers }, null, 2) + '\n',
+  JSON.stringify({ version: `du ${j}/${m}/${a}`, programmeMin: PROGRAMME, sources: { ministere: ministere.version, urssaf: urssaf.version, fiches: fichesTravail.version }, fichiers }, null, 2) + '\n',
 );
 rmSync(tmp, { recursive: true, force: true });
-console.log(`Règles publiées : ministère ${ministere.version}, URSSAF ${urssaf.version}.`);
+console.log(`Règles publiées : ministère ${ministere.version}, URSSAF ${urssaf.version}, fiches ${fichesTravail.version}.`);
