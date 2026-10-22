@@ -1,0 +1,10 @@
+{
+  "name": "code-du-travail-regles",
+  "private": true,
+  "description": "Vérifie et publie chaque nuit les règles officielles utilisées par l'appli Code du travail & Salaire net",
+  "type": "module",
+  "dependencies": {
+    "@socialgouv/modeles-social": "4.248.0",
+    "publicodes": "1.10.4"
+  }
+}

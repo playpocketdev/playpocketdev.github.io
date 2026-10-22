@@ -1,0 +1,36 @@
+# Chaque nuit : récupère les dernières règles officielles (ministère du Travail, URSSAF) pour l'appli
+# « Code du travail & Salaire net », les vérifie avec les moteurs de calcul de l'appli, et les publie
+# dans code-du-travail/regles/ si elles ont changé. En cas d'échec, GitHub envoie un e-mail au propriétaire.
+name: Règles Code du travail
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Moteurs de calcul de l'appli
+        run: npm install --prefix code-du-travail/outils --no-audit --no-fund
+      - name: Vérification et préparation des règles
+        run: node code-du-travail/outils/maj-regles.mjs
+      - name: Publication
+        run: |
+          if [ -n "$(git status --porcelain code-du-travail/regles)" ]; then
+            git config user.name "Pocket & Play"
+            git config user.email "playpocket.dev@gmail.com"
+            git add code-du-travail/regles
+            git commit -m "Code du travail : règles officielles mises à jour"
+            git push
+          else
+            echo "Rien de nouveau."
+          fi
