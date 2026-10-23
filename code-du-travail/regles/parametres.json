@@ -1,0 +1,29 @@
+{
+  "verifie": "2026-10-23",
+  "conges": {
+    "joursParMois": 2.5,
+    "joursMax": 30,
+    "joursOuvresMax": 25,
+    "joursParMoisMaladie": 2,
+    "joursMaxMaladie": 24
+  },
+  "arretMaladie": {
+    "carenceSecu": 3,
+    "carenceEmployeur": 7,
+    "ancienneteMinMois": 12,
+    "tauxDebut": 0.9,
+    "tauxSuite": 0.6666666666666666,
+    "joursBase": 30,
+    "joursParTranche": 10,
+    "ansParTranche": 5,
+    "joursMax": 90
+  },
+  "heuresSup": {
+    "dureeLegale": 35,
+    "heuresPremierTaux": 8,
+    "tauxPremier": 25,
+    "tauxSuivant": 50,
+    "tauxAccordMin": 10,
+    "dureeMaxSemaine": 48
+  }
+}

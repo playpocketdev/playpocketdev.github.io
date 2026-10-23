@@ -1,4 +1,4 @@
-// Publie les dernières règles officielles pour l'appli « Code du travail & Salaire net ».
+// Publie les dernières règles publiques de calcul pour l'appli « Code du travail & Salaire net ».
 // Lancé chaque nuit par .github/workflows/code-du-travail-regles.yml (et à la main : node maj-regles.mjs).
 //
 // 1. Cherche les dernières versions des règles du ministère du Travail (@socialgouv/modeles-social)
@@ -65,7 +65,7 @@ if (actuel && actuel.sources.ministere === ministere.version && actuel.sources.u
   process.exit(0);
 }
 if (Number(ministere.version.split('.')[0]) !== MAJEURES.ministere || Number(urssaf.version.split('.')[0]) !== MAJEURES.urssaf) {
-  echec("nouvelle version majeure des règles officielles : il faut mettre à jour l'appli avant de les publier.");
+  echec("nouvelle version majeure des règles : il faut mettre à jour l'appli avant de les publier.");
 }
 
 // ---------- 2. Récupération des règles ----------
@@ -178,7 +178,8 @@ const jour = new Date().toISOString().slice(0, 10);
 const [a, m, j] = jour.split('-');
 const fichiers = { calculateurs: `calculateurs-${ministere.version}.json`, urssaf: `urssaf-${urssaf.version}.json`, fiches: `fiches-${fichesTravail.version}.json` };
 mkdirSync(SORTIE, { recursive: true });
-for (const f of readdirSync(SORTIE)) if (f.endsWith('.json')) rmSync(new URL(f, SORTIE));
+// Seuls les fichiers produits ici sont remplacés (parametres.json et veille.json restent).
+for (const f of readdirSync(SORTIE)) if (/^(calculateurs|urssaf|fiches)-.+\.json$/.test(f)) rmSync(new URL(f, SORTIE));
 writeFileSync(new URL(fichiers.calculateurs, SORTIE), JSON.stringify(calculateurs));
 writeFileSync(new URL(fichiers.urssaf, SORTIE), JSON.stringify(reglesUrssaf));
 writeFileSync(new URL(fichiers.fiches, SORTIE), JSON.stringify(fiches));
