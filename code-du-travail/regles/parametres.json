@@ -1,5 +1,5 @@
 {
-  "verifie": "2026-10-23",
+  "verifie": "2026-10-24",
   "conges": {
     "joursParMois": 2.5,
     "joursMax": 30,
@@ -24,6 +24,8 @@
     "tauxPremier": 25,
     "tauxSuivant": 50,
     "tauxAccordMin": 10,
-    "dureeMaxSemaine": 48
+    "dureeMaxSemaine": 48,
+    "complementairePremier": 10,
+    "complementaireSuivant": 25
   }
 }
