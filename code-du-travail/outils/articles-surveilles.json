@@ -21,6 +21,10 @@
   { "numero": "L3142-1", "code": "travail", "cid": "LEGIARTI000006902669", "version": "LEGIARTI000045205234" },
   { "numero": "L3142-4", "code": "travail", "cid": "LEGIARTI000006902672", "version": "LEGIARTI000054251220" },
   { "numero": "L3243-2", "code": "travail", "cid": "LEGIARTI000006902862", "version": "LEGIARTI000006902862" },
+  { "numero": "L3243-4", "code": "travail", "cid": "LEGIARTI000006902865", "version": "LEGIARTI000020625846" },
   { "numero": "L3245-1", "code": "travail", "cid": "LEGIARTI000006902872", "version": "LEGIARTI000027566295" },
-  { "numero": "R1234-9", "code": "travail", "cid": "LEGIARTI000018483212", "version": "LEGIARTI000049816309" }
+  { "numero": "R1234-9", "code": "travail", "cid": "LEGIARTI000018483212", "version": "LEGIARTI000049816309" },
+  { "numero": "R3243-1", "code": "travail", "cid": "LEGIARTI000018487282", "version": "LEGIARTI000048841718" },
+  { "numero": "R3243-2", "code": "travail", "cid": "LEGIARTI000018487284", "version": "LEGIARTI000048841713" },
+  { "numero": "R3243-5", "code": "travail", "cid": "LEGIARTI000018487290", "version": "LEGIARTI000018533798" }
 ]
