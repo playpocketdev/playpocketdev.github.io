@@ -4,7 +4,8 @@
   "sources": {
     "ministere": "4.249.0",
     "urssaf": "11.1.0",
-    "fiches": "4.1350.0"
+    "fiches": "4.1350.0",
+    "conventions": "20261022-356dcbb5"
   },
   "fichiers": {
     "calculateurs": "calculateurs-4.249.0.json",
