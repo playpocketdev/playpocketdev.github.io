@@ -1,15 +1,15 @@
 {
-  "version": "du 27/10/2026",
+  "version": "du 28/10/2026",
   "programmeMin": 1,
   "sources": {
     "ministere": "4.249.0",
     "urssaf": "11.1.0",
-    "fiches": "4.1350.0",
+    "fiches": "4.1351.0",
     "conventions": "20261022-263555fc"
   },
   "fichiers": {
     "calculateurs": "calculateurs-4.249.0.json",
     "urssaf": "urssaf-11.1.0.json",
-    "fiches": "fiches-4.1350.0.json"
+    "fiches": "fiches-4.1351.0.json"
   }
 }
