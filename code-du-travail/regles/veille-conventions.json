@@ -1,4 +1,59 @@
 {
- "changements": [],
- "verifie": "2026-10-30"
+ "changements": [
+  {
+   "idcc": "18",
+   "type": "nouvel-accord",
+   "avant": "Accord du 15 janvier 2026 relatif aux salaires minima mensuels au 1er janvier 2026",
+   "apres": "Accord du 17 juin 2026 relatif aux salaires minima mensuels au 1er juin 2026",
+   "effet": "2026-06-17",
+   "statut": "automatique",
+   "le": "2026-10-31"
+  },
+  {
+   "idcc": "993",
+   "type": "nouvel-accord",
+   "avant": "Protocole d'accord du 21 mars 2025 relatif à la valorisation de la grille des salaires",
+   "apres": "Protocole d'accord du 15 juin 2026 relatif à la revalorisation de la grille des salaires",
+   "effet": "2026-10-01",
+   "statut": "automatique",
+   "le": "2026-10-31"
+  },
+  {
+   "idcc": "1801",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 52 du 12 décembre 2024 relatif aux rémunérations",
+   "apres": "Avenant n° 54 du 12 février 2026 relatif aux rémunérations et au plafond d'exonération de l'indemnisation du télétravail",
+   "effet": "2026-02-12",
+   "statut": "automatique",
+   "le": "2026-10-31"
+  },
+  {
+   "idcc": "2219",
+   "type": "nouvel-accord",
+   "avant": "Accord du 20 juin 2025 relatif aux rémunérations minimales",
+   "apres": "Accord du 28 avril 2026 relatif aux rémunérations minimales",
+   "effet": "2026-10-01",
+   "statut": "automatique",
+   "le": "2026-10-31"
+  },
+  {
+   "idcc": "2683",
+   "type": "nouvel-accord",
+   "avant": "Avenant du 13 janvier 2025 relatif à la rémunération minimale nationale",
+   "apres": "Avenant du 15 juin 2026 relatif à la rémunération minimale nationale",
+   "effet": "2026-06-15",
+   "statut": "automatique",
+   "le": "2026-10-31"
+  },
+  {
+   "idcc": "3249",
+   "type": "nouvel-accord",
+   "avant": "Avenant du 14 mai 2025 à l'accord du 27 mars 2025 relatif aux salaires minimaux des ouvriers et ETAM (Centre-Val de Loire)",
+   "apres": "Avenant n° 2 du 30 avril 2026 à l'accord d'harmonisation du 11 avril 2024 relatif aux salaires minimaux garantis des ouvriers et des ETAM",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-10-31"
+  }
+ ],
+ "verifie": "2026-10-31"
 }
