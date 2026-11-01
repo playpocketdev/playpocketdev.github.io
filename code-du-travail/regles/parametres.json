@@ -27,5 +27,27 @@
     "dureeMaxSemaine": 48,
     "complementairePremier": 10,
     "complementaireSuivant": 25
+  },
+  "chomage": {
+    "partieFixe": 13.18,
+    "tauxVariable": 40.4,
+    "tauxMinimum": 57,
+    "tauxMaximum": 75,
+    "allocationMinimale": 32.13,
+    "coefficientDuree": 0.75,
+    "dureeMinJours": 182,
+    "dureeMaxJours": 548,
+    "dureeMaxJours55": 685,
+    "dureeMaxJours57": 822,
+    "degressiviteSeuil": 92.57,
+    "degressiviteTaux": 30,
+    "degressiviteAgeExclu": 55,
+    "degressiviteMoisDebut": 7,
+    "retraiteComplementaire": 3,
+    "csg": 6.2,
+    "crds": 0.5,
+    "assietteCsg": 98.25,
+    "delaiAttente": 7,
+    "differeSpecifiqueMax": 150
   }
 }
