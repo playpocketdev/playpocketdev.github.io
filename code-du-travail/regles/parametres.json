@@ -39,6 +39,8 @@
     "dureeMaxJours": 548,
     "dureeMaxJours55": 685,
     "dureeMaxJours57": 822,
+    "dureeMaxRupture": 456,
+    "dureeMaxRupture55": 624,
     "degressiviteSeuil": 92.57,
     "degressiviteTaux": 30,
     "degressiviteAgeExclu": 55,
@@ -49,5 +51,10 @@
     "assietteCsg": 98.25,
     "delaiAttente": 7,
     "differeSpecifiqueMax": 150
+  },
+  "rupture": {
+    "retractationJours": 15,
+    "homologationJours": 15,
+    "csgCrds": 9.7
   }
 }
