@@ -1,6 +1,33 @@
 {
  "changements": [
   {
+   "idcc": "247",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° S 69 du 3 mars 2026 relatif aux salaires",
+   "apres": "Avenant n° S 70 du 23 juin 2026 relatif aux salaires",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-03"
+  },
+  {
+   "idcc": "303",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 18 du 2 avril 2024 à l'accord du 25 janvier 2002 relatif aux rémunérations minimales annuelles garanties",
+   "apres": "Avenant n° 19 du 1er juillet 2026 à l'accord du 25 janvier 2002 relatif aux rémunérations minimales annuelles garanties",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-03"
+  },
+  {
+   "idcc": "3251",
+   "type": "nouvel-accord",
+   "avant": "Accord du 19 mars 2025 relatif aux salaires minimaux conventionnels",
+   "apres": "Accord du 9 juin 2026 relatif aux salaires minimaux conventionnels",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-03"
+  },
+  {
    "idcc": "18",
    "type": "nouvel-accord",
    "avant": "Accord du 15 janvier 2026 relatif aux salaires minima mensuels au 1er janvier 2026",
@@ -55,5 +82,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-02"
+ "verifie": "2026-11-03"
 }
