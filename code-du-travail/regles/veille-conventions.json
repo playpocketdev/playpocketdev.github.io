@@ -1,6 +1,33 @@
 {
  "changements": [
   {
+   "idcc": "1307",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 70 du 12 novembre 2024 relatif aux salaires minima",
+   "apres": "Avenant n° 72 du 26 mai 2026 relatif aux salaires minima au 1er juin 2026",
+   "effet": "2026-06-01",
+   "statut": "automatique",
+   "le": "2026-11-04"
+  },
+  {
+   "idcc": "1558",
+   "type": "nouvel-accord",
+   "avant": "Accord du 26 février 2026 relatif à l'évolution des salaires minima conventionnels des personnels ouvriers, ETAM et cadres",
+   "apres": "Accord du 29 juin 2026 relatif à l'évolution des salaires minima conventionnels des personnels ouvriers, ETAM et cadres",
+   "effet": "2026-06-29",
+   "statut": "automatique",
+   "le": "2026-11-04"
+  },
+  {
+   "idcc": "7002",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 137 du 29 mai 2024 relatif à la revalorisation de la rémunération annuelle garantie (RAG) pour l'année 2024 et la reconduction du forfait mobilités durables (FMD)",
+   "apres": "Avenant n° 139 du 20 février 2026 relatif à la revalorisation de la rémunération annuelle garantie (RAG) pour l'année 2026",
+   "effet": "2026-02-20",
+   "statut": "automatique",
+   "le": "2026-11-04"
+  },
+  {
    "idcc": "247",
    "type": "nouvel-accord",
    "avant": "Avenant n° S 69 du 3 mars 2026 relatif aux salaires",
@@ -82,5 +109,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-03"
+ "verifie": "2026-11-04"
 }
