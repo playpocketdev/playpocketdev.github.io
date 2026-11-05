@@ -1,6 +1,33 @@
 {
  "changements": [
   {
+   "idcc": "493",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 31 du 13 février 2026 relatif aux salaires minima conventionnels",
+   "apres": "Avenant n° 32 du 3 juillet 2026 relatif aux salaires minima conventionnels",
+   "effet": "2026-07-03",
+   "statut": "automatique",
+   "le": "2026-11-05"
+  },
+  {
+   "idcc": "1412",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 77 du 26 mars 2026 relatif à la fixation des salaires minima",
+   "apres": "Avenant n° 79 du 30 juin 2026 relatif à la fixation des salaires minima",
+   "effet": "2026-06-30",
+   "statut": "automatique",
+   "le": "2026-11-05"
+  },
+  {
+   "idcc": "1621",
+   "type": "nouvel-accord",
+   "avant": "Accord du 22 avril 2025 relatif aux salaires pour l'année 2025",
+   "apres": "Accord du 16 juin 2026 relatif aux salaires pour l'année 2026",
+   "effet": "2026-08-03",
+   "statut": "automatique",
+   "le": "2026-11-05"
+  },
+  {
    "idcc": "1307",
    "type": "nouvel-accord",
    "avant": "Avenant n° 70 du 12 novembre 2024 relatif aux salaires minima",
@@ -109,5 +136,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-04"
+ "verifie": "2026-11-05"
 }
