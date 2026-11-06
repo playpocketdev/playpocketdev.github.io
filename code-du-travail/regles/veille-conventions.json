@@ -1,6 +1,69 @@
 {
  "changements": [
   {
+   "idcc": "1480",
+   "type": "nouvel-accord",
+   "avant": "Protocole d'accord du 6 novembre 2025 relatif aux minima garantis des journalistes professionnels de la presse d'information spécialisée",
+   "apres": "Avenant n° 5 du 6 juillet 2026 à l'accord du 3 juillet 2019 relatif à la classification et aux salaires minima des journalistes d'agences de presse",
+   "effet": "2026-09-01",
+   "statut": "automatique",
+   "le": "2026-11-06"
+  },
+  {
+   "idcc": "1596",
+   "type": "nouvel-accord",
+   "avant": "Accords de salaires régionaux",
+   "apres": "Accords de salaires régionaux",
+   "effet": "2026-09-01",
+   "statut": "regional",
+   "le": "2026-11-06"
+  },
+  {
+   "idcc": "2528",
+   "type": "nouvel-accord",
+   "avant": "Accord du 18 février 2026 relatif aux salaires minima à partir du 1er janvier 2026 dans les entreprises de la cordonnerie multiservice",
+   "apres": "Accord du 1er juillet 2026 relatif aux salaires minima à partir du 1er juin 2026 dans les entreprises de la cordonnerie multiservice",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-06"
+  },
+  {
+   "idcc": "2609",
+   "type": "nouvel-accord",
+   "avant": "Accords de salaires régionaux",
+   "apres": "Accords de salaires régionaux",
+   "effet": "2026-09-01",
+   "statut": "regional",
+   "le": "2026-11-06"
+  },
+  {
+   "idcc": "2931",
+   "type": "nouvel-accord",
+   "avant": "Accord du 9 décembre 2025 relatif à la revalorisation des salaires minima hiérarchiques 2026",
+   "apres": "Accord du 17 juin 2026 relatif à la revalorisation des salaires minima hiérarchiques au 1er juin 2026",
+   "effet": "2026-06-17",
+   "statut": "a-verifier",
+   "le": "2026-11-06"
+  },
+  {
+   "idcc": "3236",
+   "type": "nouvel-accord",
+   "avant": "Avenant du 16 avril 2025 relatif aux salaires minima mensuels au 1er avril 2025",
+   "apres": "Avenant du 10 juillet 2026 relatif aux salaires minima mensuels au 1er juin 2026",
+   "effet": "2026-07-10",
+   "statut": "automatique",
+   "le": "2026-11-06"
+  },
+  {
+   "idcc": "3255",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 4 du 22 janvier 2026 relatif à la modification de l'article 21 « Salaires minima conventionnels »",
+   "apres": "Avenant n° 5 du 2 juillet 2026 relatif à la modification de l'article 21 « Salaires minima conventionnels »",
+   "effet": "2026-08-01",
+   "statut": "automatique",
+   "le": "2026-11-06"
+  },
+  {
    "idcc": "493",
    "type": "nouvel-accord",
    "avant": "Avenant n° 31 du 13 février 2026 relatif aux salaires minima conventionnels",
@@ -136,5 +199,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-05"
+ "verifie": "2026-11-06"
 }
