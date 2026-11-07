@@ -1,6 +1,24 @@
 {
  "changements": [
   {
+   "idcc": "1555",
+   "type": "nouvel-accord",
+   "avant": "Accord du 28 janvier 2026 relatif aux rémunérations minimales conventionnelles au 1er mars 2026",
+   "apres": "Accord du 8 juillet 2026 relatif aux rémunérations minimales conventionnelles au 1er juin 2026",
+   "effet": "2026-07-08",
+   "statut": "automatique",
+   "le": "2026-11-07"
+  },
+  {
+   "idcc": "1580",
+   "type": "nouvel-accord",
+   "avant": "Accord du 26 mars 2026 relatif aux salaires minima conventionnels",
+   "apres": "Accord du 16 juillet 2026 relatif aux salaires minima conventionnels",
+   "effet": "2026-06-01",
+   "statut": "automatique",
+   "le": "2026-11-07"
+  },
+  {
    "idcc": "1480",
    "type": "nouvel-accord",
    "avant": "Protocole d'accord du 6 novembre 2025 relatif aux minima garantis des journalistes professionnels de la presse d'information spécialisée",
@@ -199,5 +217,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-06"
+ "verifie": "2026-11-07"
 }
