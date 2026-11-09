@@ -56,5 +56,186 @@
     "retractationJours": 15,
     "homologationJours": 15,
     "csgCrds": 9.7
+  },
+  "kilometrique": {
+    "annee": 2025,
+    "majorationElectrique": 20,
+    "voiture": {
+      "seuils": [
+        5000,
+        20000
+      ],
+      "puissances": [
+        {
+          "cvMax": 3,
+          "formules": [
+            {
+              "taux": 0.529,
+              "fixe": 0
+            },
+            {
+              "taux": 0.316,
+              "fixe": 1065
+            },
+            {
+              "taux": 0.37,
+              "fixe": 0
+            }
+          ]
+        },
+        {
+          "cvMax": 4,
+          "formules": [
+            {
+              "taux": 0.606,
+              "fixe": 0
+            },
+            {
+              "taux": 0.34,
+              "fixe": 1330
+            },
+            {
+              "taux": 0.407,
+              "fixe": 0
+            }
+          ]
+        },
+        {
+          "cvMax": 5,
+          "formules": [
+            {
+              "taux": 0.636,
+              "fixe": 0
+            },
+            {
+              "taux": 0.357,
+              "fixe": 1395
+            },
+            {
+              "taux": 0.427,
+              "fixe": 0
+            }
+          ]
+        },
+        {
+          "cvMax": 6,
+          "formules": [
+            {
+              "taux": 0.665,
+              "fixe": 0
+            },
+            {
+              "taux": 0.374,
+              "fixe": 1457
+            },
+            {
+              "taux": 0.447,
+              "fixe": 0
+            }
+          ]
+        },
+        {
+          "cvMax": 99,
+          "formules": [
+            {
+              "taux": 0.697,
+              "fixe": 0
+            },
+            {
+              "taux": 0.394,
+              "fixe": 1515
+            },
+            {
+              "taux": 0.47,
+              "fixe": 0
+            }
+          ]
+        }
+      ]
+    },
+    "moto": {
+      "seuils": [
+        3000,
+        6000
+      ],
+      "puissances": [
+        {
+          "cvMax": 2,
+          "formules": [
+            {
+              "taux": 0.395,
+              "fixe": 0
+            },
+            {
+              "taux": 0.099,
+              "fixe": 891
+            },
+            {
+              "taux": 0.248,
+              "fixe": 0
+            }
+          ]
+        },
+        {
+          "cvMax": 5,
+          "formules": [
+            {
+              "taux": 0.468,
+              "fixe": 0
+            },
+            {
+              "taux": 0.082,
+              "fixe": 1158
+            },
+            {
+              "taux": 0.275,
+              "fixe": 0
+            }
+          ]
+        },
+        {
+          "cvMax": 99,
+          "formules": [
+            {
+              "taux": 0.606,
+              "fixe": 0
+            },
+            {
+              "taux": 0.079,
+              "fixe": 1583
+            },
+            {
+              "taux": 0.343,
+              "fixe": 0
+            }
+          ]
+        }
+      ]
+    },
+    "cyclomoteur": {
+      "seuils": [
+        3000,
+        6000
+      ],
+      "puissances": [
+        {
+          "cvMax": 99,
+          "formules": [
+            {
+              "taux": 0.315,
+              "fixe": 0
+            },
+            {
+              "taux": 0.079,
+              "fixe": 711
+            },
+            {
+              "taux": 0.198,
+              "fixe": 0
+            }
+          ]
+        }
+      ]
+    }
   }
 }
