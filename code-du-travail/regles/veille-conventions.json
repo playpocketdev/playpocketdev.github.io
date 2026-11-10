@@ -1,6 +1,15 @@
 {
  "changements": [
   {
+   "idcc": "538",
+   "type": "nouvel-accord",
+   "avant": "Accord du 27 novembre 2025 relatif aux salaires garantis et aux autres éléments de rémunération pour l'année 2026",
+   "apres": "Accord du 29 juillet 2026 relatif aux salaires garantis et aux autres éléments de rémunération pour fin 2026",
+   "effet": "2026-11-01",
+   "statut": "automatique",
+   "le": "2026-11-10"
+  },
+  {
    "idcc": "1555",
    "type": "nouvel-accord",
    "avant": "Accord du 28 janvier 2026 relatif aux rémunérations minimales conventionnelles au 1er mars 2026",
@@ -217,5 +226,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-09"
+ "verifie": "2026-11-10"
 }
