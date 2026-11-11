@@ -1,6 +1,69 @@
 {
  "changements": [
   {
+   "idcc": "573",
+   "type": "nouvel-accord",
+   "avant": "Accord du 17 mars 2026 relatif aux salaires",
+   "apres": "Accord du 20 juillet 2026 relatif aux salaires au 1er septembre 2026",
+   "effet": "2026-09-01",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
+   "idcc": "998",
+   "type": "nouvel-accord",
+   "avant": "Accord du 18 juillet 2025 relatif aux rémunérations minimales annuelles professionnelles garanties",
+   "apres": "Accord du 17 juillet 2026 relatif aux rémunérations minimales annuelles professionnelles garanties",
+   "effet": "2026-07-17",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
+   "idcc": "1256",
+   "type": "nouvel-accord",
+   "avant": "Accord du 18 juillet 2025 relatif aux rémunérations minimales annuelles professionnelles garanties",
+   "apres": "Accord du 17 juillet 2026 relatif aux rémunérations minimales annuelles professionnelles garanties",
+   "effet": "2026-07-17",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
+   "idcc": "1431",
+   "type": "nouvel-accord",
+   "avant": "Accord du 14 septembre 2023 relatif aux salaires minima",
+   "apres": "Accord du 9 juillet 2026 relatif aux salaires minima",
+   "effet": "2026-11-01",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
+   "idcc": "1589",
+   "type": "nouvel-accord",
+   "avant": "Avenant du 18 décembre 2025 à l'annexe II de la convention collective relative aux salaires minima au 1er janvier 2026",
+   "apres": "Avenant du 24 juin 2026 relatif aux salaires minima au 1er juillet 2026 (annexe II de la convention collective)",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
+   "idcc": "1979",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 33 du 19 juin 2024 relatif aux salaires",
+   "apres": "Avenant n° 36 du 4 juin 2026 relatif aux salaires",
+   "effet": "2026-11-01",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
+   "idcc": "3224",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 12 du 6 mars 2025 relatif aux salaires et minima conventionnels",
+   "apres": "Avenant n° 13 du 17 juin 2026 relatif aux salaires et minima conventionnels",
+   "effet": "2026-06-01",
+   "statut": "automatique",
+   "le": "2026-11-11"
+  },
+  {
    "idcc": "538",
    "type": "nouvel-accord",
    "avant": "Accord du 27 novembre 2025 relatif aux salaires garantis et aux autres éléments de rémunération pour l'année 2026",
@@ -226,5 +289,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-10"
+ "verifie": "2026-11-11"
 }
