@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barème kilométrique 2026 : calcul des indemnités kilométriques</title>
+<meta name="description" content="Calcule tes indemnités kilométriques avec le barème 2026 : voiture, moto, scooter, électrique. Ce que ton employeur peut te rembourser sans cotisations, et tes frais réels pour les impôts.">
+<link rel="canonical" href="https://playpocketdev.github.io/code-du-travail/bareme-kilometrique/">
+<link rel="icon" href="../code-du-travail-icon.png">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../outils.css">
+</head>
+<body>
+
+<header class="entete vert">
+  <div class="dedans">
+    <a href="../"><img src="../code-du-travail-icon.png" alt="" width="56" height="56"></a>
+    <div>
+      <p class="jeu"><a href="../">Code du travail &amp; Salaire net</a></p>
+      <p class="studio">Calculs gratuits pour les salariés</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Barème kilométrique 2026 : calcule tes indemnités kilométriques</h1>
+  <p class="chapo">Tu utilises ta voiture, ta moto ou ton scooter pour ton travail ? Le barème kilométrique donne le montant que ton employeur peut te rembourser sans cotisations ni impôt. C’est aussi le barème des frais réels sur la déclaration de revenus.</p>
+
+  <section class="calcul" aria-label="Calcul des indemnités kilométriques">
+    <span class="libelle">Ton véhicule</span>
+    <div class="choix" id="vehicule">
+      <button type="button" data-valeur="voiture" aria-pressed="true">Voiture</button>
+      <button type="button" data-valeur="moto" aria-pressed="false">Moto</button>
+      <button type="button" data-valeur="cyclomoteur" aria-pressed="false">Scooter 50 cm³</button>
+    </div>
+    <div id="bloc-cv">
+      <label for="cv">Puissance fiscale</label>
+      <p class="aide">Écrite sur la carte grise, case P.6.</p>
+      <select id="cv"></select>
+    </div>
+    <span class="libelle">Moteur</span>
+    <div class="choix" id="moteur">
+      <button type="button" data-valeur="non" aria-pressed="true">Essence, diesel, hybride</button>
+      <button type="button" data-valeur="oui" aria-pressed="false">100 % électrique</button>
+    </div>
+    <label for="km">Kilomètres pour le travail dans l’année</label>
+    <p class="aide">Missions, clients, chantiers. Par mois ? Multiplie par 12.</p>
+    <input id="km" type="number" inputmode="decimal" min="0" placeholder="Ex. : 6000">
+    <div class="resultat" id="resultat" hidden aria-live="polite">
+      <div class="etiquette">Ton employeur peut te rembourser jusqu’à</div>
+      <div class="valeur" id="montant"></div>
+      <div class="detail" id="detail"></div>
+    </div>
+  </section>
+
+  <h2>Le barème des voitures</h2>
+  <p><strong>d</strong> = distance parcourue pour le travail dans l’année, en kilomètres. <span id="annee"></span></p>
+  <div class="tableau"><table id="tableau-voiture"></table></div>
+  <h2>Motos et scooters</h2>
+  <div class="tableau"><table id="tableau-moto"></table></div>
+  <div class="tableau"><table id="tableau-cyclomoteur"></table></div>
+  <p>Pour un véhicule 100 % électrique, le montant est majoré de <span id="majoration">20</span> %.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Mon employeur doit-il appliquer ce barème ?</summary>
+    <p>Le barème est un maximum, pas un minimum : jusqu’à ce montant, le remboursement n’est soumis ni aux cotisations ni à l’impôt. Ton employeur peut aussi rembourser tes frais réels, ou suivre ta convention collective. Au-dessus du barème, la différence est en principe soumise aux cotisations, sauf frais justifiés.</p>
+  </details>
+  <details>
+    <summary>Et le trajet entre chez moi et mon travail ?</summary>
+    <p>Ce n’est pas un déplacement professionnel : il n’ouvre pas droit aux indemnités kilométriques, sauf cas particuliers. Sur ta déclaration de revenus, tu peux en revanche le déduire au barème si tu choisis les frais réels (40 km par trajet au plus, sauf raison particulière).</p>
+  </details>
+  <details>
+    <summary>Que couvre le barème ?</summary>
+    <p>Tout ce que coûte le véhicule : carburant, entretien, réparations, pneus, assurance, usure. Les péages et le stationnement se remboursent en plus, sur justificatifs.</p>
+  </details>
+
+  <div class="appli">
+    <img src="../code-du-travail-icon.png" alt="" width="56" height="56">
+    <div>
+      <p><strong>Code du travail &amp; Salaire net</strong> : indemnités kilométriques, fiche de paie vérifiée, salaire brut en net, droits en fin de contrat. Gratuit, sans compte, tes données restent sur ton téléphone.</p>
+      <a class="bouton" href="https://play.google.com/store/apps/details?id=com.codedutravail.app">Google Play</a>
+    </div>
+  </div>
+  <p>Autres calculs : <a href="../prime-activite/">prime d’activité</a> · <a href="../indemnite-rupture-conventionnelle/">indemnité de rupture conventionnelle</a></p>
+  <p class="note">Estimation indicative, qui ne remplace pas un conseil juridique. Barème fiscal publié par la direction générale des Finances publiques (impots.gouv.fr), utilisé par l’URSSAF. Application indépendante, non affiliée à l’État.</p>
+</main>
+
+<script type="module">
+  import { choix, euros, lu, nombre, regles } from '../outils.js';
+  const f = (taux, fixe = 0) => ({ taux, fixe });
+  // Valeurs de secours : barème des revenus 2025 (le même depuis 2023).
+  const SECOURS = {
+    kilometrique: {
+      annee: 2025,
+      majorationElectrique: 20,
+      voiture: { seuils: [5000, 20000], puissances: [
+        { cvMax: 3, formules: [f(0.529), f(0.316, 1065), f(0.37)] }, { cvMax: 4, formules: [f(0.606), f(0.34, 1330), f(0.407)] },
+        { cvMax: 5, formules: [f(0.636), f(0.357, 1395), f(0.427)] }, { cvMax: 6, formules: [f(0.665), f(0.374, 1457), f(0.447)] },
+        { cvMax: 99, formules: [f(0.697), f(0.394, 1515), f(0.47)] } ] },
+      moto: { seuils: [3000, 6000], puissances: [
+        { cvMax: 2, formules: [f(0.395), f(0.099, 891), f(0.248)] }, { cvMax: 5, formules: [f(0.468), f(0.082, 1158), f(0.275)] },
+        { cvMax: 99, formules: [f(0.606), f(0.079, 1583), f(0.343)] } ] },
+      cyclomoteur: { seuils: [3000, 6000], puissances: [{ cvMax: 99, formules: [f(0.315), f(0.079, 711), f(0.198)] }] },
+    },
+  };
+  const k = (await regles('parametres.json', SECOURS)).kilometrique ?? SECOURS.kilometrique;
+  const NOMS = { voiture: 'Voiture', moto: 'Moto (plus de 50 cm³)', cyclomoteur: 'Scooter ou cyclomoteur (50 cm³ ou moins)' };
+  const libelle = (v, p, i) => {
+    if (v === 'cyclomoteur') return 'Tous';
+    const de = i === 0 ? 1 : p[i - 1].cvMax + 1;
+    if (p[i].cvMax >= 99) return v === 'voiture' ? `${de} CV et plus` : `Plus de ${de - 1} CV`;
+    return i === 0 ? (v === 'voiture' ? `${p[i].cvMax} CV et moins` : `${de} à ${p[i].cvMax} CV`) : de === p[i].cvMax ? `${de} CV` : `${de} à ${p[i].cvMax} CV`;
+  };
+  const formule = ({ taux, fixe }) => (fixe ? `(d × ${nombre(taux, 3)}) + ${nombre(fixe)} €` : `d × ${nombre(taux, 3)}`);
+  for (const v of ['voiture', 'moto', 'cyclomoteur']) {
+    const b = k[v];
+    const [s1, s2] = b.seuils;
+    document.getElementById(`tableau-${v}`).innerHTML =
+      `<caption style="text-align:left;font-weight:600;padding:4px 0">${NOMS[v]}</caption><thead><tr><th>Puissance</th><th>Jusqu’à ${nombre(s1)} km</th><th>De ${nombre(s1 + 1)} à ${nombre(s2)} km</th><th>Plus de ${nombre(s2)} km</th></tr></thead><tbody>` +
+      b.puissances.map((p, i) => `<tr><td>${libelle(v, b.puissances, i)}</td>${p.formules.map((x) => `<td>${formule(x)}</td>`).join('')}</tr>`).join('') +
+      '</tbody>';
+  }
+  document.getElementById('annee').textContent = `Barème des revenus ${k.annee}, utilisé en ${k.annee + 1}.`;
+  document.getElementById('majoration').textContent = k.majorationElectrique;
+
+  let vehicule = 'voiture';
+  let electrique = false;
+  const cv = document.getElementById('cv');
+  const remplirCv = () => {
+    const p = k[vehicule].puissances;
+    cv.innerHTML = p.map((x, i) => `<option value="${x.cvMax}">${libelle(vehicule, p, i)}</option>`).join('');
+    cv.value = String(p[Math.min(2, p.length - 1)].cvMax);
+    document.getElementById('bloc-cv').hidden = p.length === 1;
+  };
+  const calculer = () => {
+    const km = lu(document.getElementById('km'));
+    const res = document.getElementById('resultat');
+    if (!(km > 0)) return (res.hidden = true);
+    const b = k[vehicule];
+    const ligne = b.puissances.find((p) => Number(cv.value) <= p.cvMax) ?? b.puissances.at(-1);
+    const t = km <= b.seuils[0] ? 0 : km <= b.seuils[1] ? 1 : 2;
+    const { taux, fixe } = ligne.formules[t];
+    const montant = (km * taux + fixe) * (electrique ? 1 + k.majorationElectrique / 100 : 1);
+    document.getElementById('montant').textContent = euros(montant);
+    document.getElementById('detail').textContent = `par an, soit ${euros(montant / 12)} par mois · ${nombre(montant / km, 3)} € par km${electrique ? ' · électrique : +' + k.majorationElectrique + ' %' : ''}`;
+    res.hidden = false;
+  };
+  choix(document.getElementById('vehicule'), (v) => { vehicule = v; remplirCv(); calculer(); });
+  choix(document.getElementById('moteur'), (v) => { electrique = v === 'oui'; calculer(); });
+  cv.addEventListener('change', calculer);
+  document.getElementById('km').addEventListener('input', calculer);
+  remplirCv();
+</script>
+</body>
+</html>

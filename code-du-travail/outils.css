@@ -1,0 +1,92 @@
+/* Pages de calcul de « Code du travail & Salaire net » : la base du site, aux couleurs de l'appli. */
+:root {
+  --vert: #0f6e5f;
+  --vert-clair: #e3f1ee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vert: #5cc9b4;
+    --vert-clair: #13342e;
+  }
+}
+.entete.vert { background: linear-gradient(165deg, #14806e 0%, #0f6e5f 60%, #0b5247 100%); }
+.entete.vert .jeu { color: #fff; }
+.entete.vert .studio { color: #c9efe7; }
+
+main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+h1 { font-size: 1.7rem; line-height: 1.2; margin: 24px 0 8px; }
+h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+a { color: var(--vert); }
+.chapo { color: var(--doux); margin-top: 0; }
+
+.calcul { background: var(--carte); border: 1px solid var(--bord); border-radius: 16px; padding: 16px; margin: 16px 0; }
+.calcul label, .calcul .libelle { display: block; font-weight: 600; margin: 14px 0 6px; }
+.calcul label:first-child, .calcul .libelle:first-child { margin-top: 0; }
+.calcul input, .calcul select {
+  width: 100%;
+  font: inherit;
+  padding: 10px 12px;
+  border: 1.5px solid var(--bord);
+  border-radius: 10px;
+  background: var(--fond);
+  color: var(--texte);
+}
+.calcul .aide { color: var(--doux); font-size: 0.9rem; margin: -2px 0 6px; }
+.choix { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
+.choix button {
+  font: inherit;
+  padding: 10px 8px;
+  border: 1.5px solid var(--bord);
+  border-radius: 10px;
+  background: var(--fond);
+  color: var(--texte);
+  cursor: pointer;
+}
+.choix button[aria-pressed='true'] { border-color: var(--vert); background: var(--vert-clair); color: var(--vert); font-weight: 650; }
+
+.resultat {
+  margin-top: 16px;
+  padding: 18px 16px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #14806e, #0b5247);
+  color: #fff;
+  text-align: center;
+}
+.resultat .etiquette { opacity: 0.9; }
+.resultat .valeur { font-size: 2.2rem; font-weight: 800; line-height: 1.15; margin: 4px 0; }
+.resultat .detail { font-size: 0.92rem; opacity: 0.92; }
+.resultat[hidden] { display: none; }
+
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 0.93rem; }
+th, td { border-bottom: 1px solid var(--bord); padding: 8px 6px; text-align: left; vertical-align: top; }
+th { color: var(--doux); font-weight: 600; }
+.tableau { overflow-x: auto; }
+
+.appli {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: var(--vert-clair);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 32px 0 16px;
+}
+.appli img { width: 56px; height: 56px; border-radius: 14px; flex: none; }
+.appli p { margin: 0; }
+.appli a.bouton {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--vert);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 650;
+}
+@media (prefers-color-scheme: dark) {
+  .appli a.bouton { color: #0c1a24; }
+}
+.autres { padding-left: 20px; }
+.note { color: var(--doux); font-size: 0.88rem; border-top: 1px solid var(--bord); margin-top: 32px; padding-top: 12px; }
+details { background: var(--carte); border: 1px solid var(--bord); border-radius: 12px; padding: 10px 14px; margin: 8px 0; }
+summary { cursor: pointer; font-weight: 600; }

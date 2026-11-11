@@ -50,7 +50,10 @@
     "crds": 0.5,
     "assietteCsg": 98.25,
     "delaiAttente": 7,
-    "differeSpecifiqueMax": 150
+    "differeSpecifiqueMax": 150,
+    "differeSpecifiqueEcoMax": 75,
+    "diviseurDiffereSpecifique": 111.8,
+    "differeCongesMax": 30
   },
   "rupture": {
     "retractationJours": 15,
@@ -237,5 +240,30 @@
         }
       ]
     }
+  },
+  "primeActivite": {
+    "montantForfaitaire": 638.28,
+    "tauxRevenus": 59.85,
+    "majoration2": 50,
+    "majoration3": 30,
+    "majorationEnfant3": 40,
+    "bonificationDebutSmic": 59,
+    "bonificationPleineSmic": 138,
+    "bonificationMax": 37.7,
+    "forfaitLogement1": 12,
+    "forfaitLogement2": 16,
+    "forfaitLogement3": 16.5,
+    "seuilVersement": 15
+  },
+  "fraisReels": {
+    "annee": 2025,
+    "deductionTaux": 10,
+    "deductionMin": 509,
+    "deductionMax": 14555,
+    "distanceMax": 40,
+    "repasDomicile": 5.45,
+    "repasPlafond": 21.1,
+    "teletravailJour": 2.7,
+    "teletravailAn": 626.4
   }
 }

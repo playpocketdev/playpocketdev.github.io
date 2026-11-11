@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prime d’activité 2026 : simulation du montant</title>
+<meta name="description" content="Estime ta prime d’activité avec les règles en vigueur depuis avril 2026 : forfait, bonification revalorisée, aide au logement, couple et enfants. Gratuit et sans inscription.">
+<link rel="canonical" href="https://playpocketdev.github.io/code-du-travail/prime-activite/">
+<link rel="icon" href="../code-du-travail-icon.png">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../outils.css">
+</head>
+<body>
+
+<header class="entete vert">
+  <div class="dedans">
+    <a href="../"><img src="../code-du-travail-icon.png" alt="" width="56" height="56"></a>
+    <div>
+      <p class="jeu"><a href="../">Code du travail &amp; Salaire net</a></p>
+      <p class="studio">Calculs gratuits pour les salariés</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Prime d’activité 2026 : estime ton montant</h1>
+  <p class="chapo">La prime d’activité complète les revenus des salariés modestes. Elle a été revalorisée en avril 2026 : la bonification grandit maintenant jusqu’à 1,15 SMIC. Indique ta situation pour estimer ce que la CAF peut te verser chaque mois.</p>
+
+  <section class="calcul" aria-label="Estimation de la prime d’activité">
+    <span class="libelle">Tu vis</span>
+    <div class="choix" id="couple">
+      <button type="button" data-valeur="non" aria-pressed="true">Seul(e)</button>
+      <button type="button" data-valeur="oui" aria-pressed="false">En couple</button>
+    </div>
+    <label for="enfants">Enfants à charge</label>
+    <select id="enfants"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+    <label for="salaire">Ton salaire net par mois</label>
+    <p class="aide">Le « montant net social » de ta fiche de paie, en moyenne sur 3 mois.</p>
+    <input id="salaire" type="number" inputmode="decimal" min="0" placeholder="Ex. : 1450">
+    <div id="bloc-conjoint" hidden>
+      <label for="conjoint">Salaire net de ton conjoint par mois</label>
+      <input id="conjoint" type="number" inputmode="decimal" min="0" placeholder="0">
+    </div>
+    <label for="autres">Autres revenus du foyer par mois</label>
+    <p class="aide">Chômage, indemnités journalières, pension, allocations familiales… Pas l’aide au logement.</p>
+    <input id="autres" type="number" inputmode="decimal" min="0" placeholder="0">
+    <span class="libelle">Aide au logement, logé gratuitement ou propriétaire</span>
+    <div class="choix" id="logement">
+      <button type="button" data-valeur="oui" aria-pressed="false">Oui</button>
+      <button type="button" data-valeur="non" aria-pressed="true">Non</button>
+    </div>
+    <div class="resultat" id="resultat" hidden aria-live="polite">
+      <div class="etiquette">Prime d’activité estimée</div>
+      <div class="valeur" id="montant"></div>
+      <div class="detail" id="detail"></div>
+    </div>
+  </section>
+
+  <h2>Comment la prime d’activité est calculée</h2>
+  <p>Montant = forfait selon le foyer + <span id="taux">59,85</span> % des salaires + une bonification pour chaque salarié − les ressources du foyer (au moins le forfait).</p>
+  <ul>
+    <li><strong>Forfait</strong> : <span id="forfait">638,28 €</span> pour une personne seule, plus 50 % pour la 2e personne, 30 % pour la 3e et la 4e, 40 % à partir du 3e enfant.</li>
+    <li><strong>Bonification</strong> : nulle jusqu’à un demi-SMIC (<span id="debut"></span>), elle grandit jusqu’à <span id="max">240,63 €</span> pour un salaire de 1,15 SMIC (<span id="plein"></span>) ou plus.</li>
+    <li><strong>Forfait logement</strong> : avec une aide au logement, ou logé gratuitement, ou propriétaire, une somme fixe compte dans les ressources.</li>
+    <li>Sous 15 € par mois, la prime n’est pas versée.</li>
+  </ul>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Qui peut toucher la prime d’activité ?</summary>
+    <p>Les personnes de 18 ans ou plus qui vivent en France et travaillent (salariés, indépendants, apprentis et étudiants sous conditions de revenus). La demande se fait sur caf.fr, ou msa.fr pour le régime agricole.</p>
+  </details>
+  <details>
+    <summary>Jusqu’à quel salaire ?</summary>
+    <p>Pour une personne seule sans autres revenus, la prime s’arrête vers 1,5 SMIC net. Les enfants, le couple et les autres ressources changent ce seuil.</p>
+  </details>
+  <details>
+    <summary>Pourquoi mon montant est-il différent ?</summary>
+    <p>La CAF tient compte de toute ta situation : les 3 derniers mois de revenus, certaines majorations (parent seul depuis peu, enfant de moins de 3 ans), les revenus du patrimoine. Cette page donne une estimation.</p>
+  </details>
+
+  <div class="appli">
+    <img src="../code-du-travail-icon.png" alt="" width="56" height="56">
+    <div>
+      <p><strong>Code du travail &amp; Salaire net</strong> : la prime d’activité calculée avec ton bulletin de paie, la fiche de paie vérifiée ligne par ligne, tes droits en fin de contrat. Gratuit, sans compte.</p>
+      <a class="bouton" href="https://play.google.com/store/apps/details?id=com.codedutravail.app">Google Play</a>
+    </div>
+  </div>
+  <p>Autres calculs : <a href="../bareme-kilometrique/">barème kilométrique</a> · <a href="../indemnite-rupture-conventionnelle/">indemnité de rupture conventionnelle</a></p>
+  <p class="note">Estimation indicative, qui ne remplace pas la simulation de la CAF. Règles du Code de la sécurité sociale, montants au 1er avril 2026 (décret du 30 mars 2026). Application indépendante, non affiliée à l’État ni à la CAF.</p>
+</main>
+
+<script type="module">
+  import { choix, euros, lu, regles } from '../outils.js';
+  const SECOURS = {
+    montantForfaitaire: 638.28, tauxRevenus: 59.85, majoration2: 50, majoration3: 30, majorationEnfant3: 40,
+    bonificationDebutSmic: 59, bonificationPleineSmic: 138, bonificationMax: 37.7,
+    forfaitLogement1: 12, forfaitLogement2: 16, forfaitLogement3: 16.5, seuilVersement: 15,
+  };
+  const [params, reperes] = await Promise.all([regles('parametres.json', {}), regles('reperes.json', {})]);
+  const p = params.primeActivite ?? SECOURS;
+  // SMIC horaire au centime, d'après le SMIC mensuel publié (151,67 heures).
+  const smicH = reperes.smic?.mensuel ? Math.round((reperes.smic.mensuel / 151.67) * 100) / 100 : 12.31;
+  const coef = (couple, enfants) => {
+    const adultes = couple ? 2 : 1;
+    let c = 1;
+    for (let n = 2; n <= adultes + enfants; n++) c += n === 2 ? p.majoration2 / 100 : n - adultes >= 3 ? p.majorationEnfant3 / 100 : p.majoration3 / 100;
+    return c;
+  };
+  const max = (p.montantForfaitaire * p.bonificationMax) / 100;
+  const bonif = (r) => {
+    const a = p.bonificationDebutSmic * smicH, b = p.bonificationPleineSmic * smicH;
+    return r <= a ? 0 : r >= b ? max : (max * (r - a)) / (b - a);
+  };
+  document.getElementById('taux').textContent = String(p.tauxRevenus).replace('.', ',');
+  document.getElementById('forfait').textContent = euros(p.montantForfaitaire);
+  document.getElementById('max').textContent = euros(max);
+  document.getElementById('debut').textContent = euros(p.bonificationDebutSmic * smicH, 0);
+  document.getElementById('plein').textContent = euros(p.bonificationPleineSmic * smicH, 0);
+
+  let couple = false, logement = false;
+  const calculer = () => {
+    const res = document.getElementById('resultat');
+    const salaire = lu(document.getElementById('salaire'));
+    if (!(salaire > 0)) return (res.hidden = true);
+    const enfants = Number(document.getElementById('enfants').value);
+    const personnes = (couple ? 2 : 1) + enfants;
+    const forfait = p.montantForfaitaire * coef(couple, enfants);
+    const revenus = couple ? [salaire, lu(document.getElementById('conjoint'))] : [salaire];
+    const total = revenus.reduce((a, b) => a + b, 0);
+    const fl = !logement ? 0 : personnes === 1 ? (p.montantForfaitaire * p.forfaitLogement1) / 100 : personnes === 2 ? (p.montantForfaitaire * coef(true, 0) * p.forfaitLogement2) / 100 : (p.montantForfaitaire * coef(true, 1) * p.forfaitLogement3) / 100;
+    const ressources = total + lu(document.getElementById('autres')) + fl;
+    const prime = Math.max(0, forfait + (total * p.tauxRevenus) / 100 + revenus.filter((r) => r > 0).reduce((a, r) => a + bonif(r), 0) - Math.max(ressources, forfait));
+    const verse = prime >= p.seuilVersement;
+    document.getElementById('montant').textContent = verse ? euros(Math.round(prime), 0) : 'Pas de prime';
+    document.getElementById('detail').textContent = verse ? 'par mois, versée par la CAF' : prime > 0 ? `moins de ${euros(p.seuilVersement, 0)} par mois : rien n’est versé` : 'avec ces revenus';
+    res.hidden = false;
+  };
+  choix(document.getElementById('couple'), (v) => { couple = v === 'oui'; document.getElementById('bloc-conjoint').hidden = !couple; calculer(); });
+  choix(document.getElementById('logement'), (v) => { logement = v === 'oui'; calculer(); });
+  for (const id of ['enfants', 'salaire', 'conjoint', 'autres']) document.getElementById(id).addEventListener('input', calculer);
+</script>
+</body>
+</html>
