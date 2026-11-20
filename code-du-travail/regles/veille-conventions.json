@@ -1,6 +1,51 @@
 {
  "changements": [
   {
+   "idcc": "18",
+   "type": "nouvel-accord",
+   "avant": "Accord du 17 juin 2026 relatif aux salaires minima mensuels au 1er juin 2026",
+   "apres": "Accord du 15 juillet 2026 relatif aux salaires minima (secteur des textiles artificiels et synthétiques et produits assimilés)",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-20"
+  },
+  {
+   "idcc": "1170",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 18 du 26 juin 2024 à l'accord du 13 février 2004 relatif aux rémunérations minimales annuelles garanties des ouvriers, employés, techniciens, agents de maîtrise (ETAM)",
+   "apres": "Avenant n° 19 du 30 avril 2026 à l'accord du 13 février 2004 relatif aux rémunérations minimales annuelles garanties des ouvriers, employés, techniciens, agents de maîtrise (ETAM)",
+   "effet": "1982-02-17",
+   "statut": "automatique",
+   "le": "2026-11-20"
+  },
+  {
+   "idcc": "1285",
+   "type": "nouvel-accord",
+   "avant": "Accord du 1er juillet 2026 relatif aux salaires pour l'année 2026",
+   "apres": "Avenant du 16 juillet 2026 à l'accord du 1er juillet 2026 relatif aux salaires pour l'année 2026",
+   "effet": "2026-08-01",
+   "statut": "automatique",
+   "le": "2026-11-20"
+  },
+  {
+   "idcc": "1483",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 29 du 16 décembre 2025 relatif aux salaires minima et à la prime d'ancienneté",
+   "apres": "Accord du 12 juin 2026 relatif aux salaires minima et primes d'ancienneté applicables à Mayotte dans le cadre de la convergence sociale",
+   "effet": "2026-10-01",
+   "statut": "automatique",
+   "le": "2026-11-20"
+  },
+  {
+   "idcc": "1978",
+   "type": "nouvel-accord",
+   "avant": "Accord du 10 mars 2026 relatif aux salaires minima conventionnels",
+   "apres": "Accord du 9 juillet 2026 relatif aux salaires minima conventionnels",
+   "effet": "2026-11-01",
+   "statut": "automatique",
+   "le": "2026-11-20"
+  },
+  {
    "idcc": "573",
    "type": "nouvel-accord",
    "avant": "Accord du 17 mars 2026 relatif aux salaires",
@@ -289,5 +334,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-19"
+ "verifie": "2026-11-20"
 }
