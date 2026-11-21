@@ -1,6 +1,42 @@
 {
  "changements": [
   {
+   "idcc": "2494",
+   "type": "nouvel-accord",
+   "avant": "Accord du 31 mars 2026 relatif aux salaires minima conventionnels au 1er avril 2026",
+   "apres": "Avenant n° 29 du 8 juillet 2026 à l'accord du 31 mars 2026 relatif aux salaires minima conventionnels au 1er juin 2026",
+   "effet": "2026-07-08",
+   "statut": "automatique",
+   "le": "2026-11-21"
+  },
+  {
+   "idcc": "3203",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 16 du 17 décembre 2025 relatif aux salaires minima conventionnels au 1er janvier 2026",
+   "apres": "Avenant n° 17 du 17 juin 2026 relatif aux salaires minima conventionnels au 1er juin 2026",
+   "effet": "2026-06-17",
+   "statut": "automatique",
+   "le": "2026-11-21"
+  },
+  {
+   "idcc": "3222",
+   "type": "nouvel-accord",
+   "avant": "Accord du 29 janvier 2025 relatif aux salaires minima et à la prime d'ancienneté",
+   "apres": "Accord du 17 juin 2026 relatif aux salaires minima et à la prime d'ancienneté",
+   "effet": "2026-09-01",
+   "statut": "automatique",
+   "le": "2026-11-21"
+  },
+  {
+   "idcc": "3253",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 136 du 24 janvier 2025 relatif aux salaires minima du personnel salarié non-avocats",
+   "apres": "Accord n° 1 du 26 juin 2026 relatif aux salaires minima au 1er juillet 2026",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-21"
+  },
+  {
    "idcc": "18",
    "type": "nouvel-accord",
    "avant": "Accord du 17 juin 2026 relatif aux salaires minima mensuels au 1er juin 2026",
@@ -334,5 +370,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-20"
+ "verifie": "2026-11-21"
 }
