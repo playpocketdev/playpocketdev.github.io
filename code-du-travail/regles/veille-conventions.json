@@ -1,6 +1,51 @@
 {
  "changements": [
   {
+   "idcc": "953",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 64 du 15 janvier 2026 relatif aux salaires au 1er janvier 2026",
+   "apres": "Avenant n° 65 du 4 juin 2026 relatif aux salaires au 1er juin 2026",
+   "effet": "2026-06-01",
+   "statut": "automatique",
+   "le": "2026-11-25"
+  },
+  {
+   "idcc": "1536",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 2026/1 du 3 mars 2026 relatif aux salaires minima au 1er mars 2026",
+   "apres": "Avenant n° 2026/3 du 29 juin 2026 relatif aux salaires minima au 1er juin 2026",
+   "effet": "2026-06-29",
+   "statut": "automatique",
+   "le": "2026-11-25"
+  },
+  {
+   "idcc": "1596",
+   "type": "nouvel-accord",
+   "avant": "Accords de salaires régionaux",
+   "apres": "Accords de salaires régionaux",
+   "effet": "2026-09-01",
+   "statut": "regional",
+   "le": "2026-11-25"
+  },
+  {
+   "idcc": "2609",
+   "type": "nouvel-accord",
+   "avant": "Accords de salaires régionaux",
+   "apres": "Accords de salaires régionaux",
+   "effet": "2026-09-01",
+   "statut": "regional",
+   "le": "2026-11-25"
+  },
+  {
+   "idcc": "3223",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 4 du 14 octobre 2025 relatif aux salaires minima",
+   "apres": "Avenant n° 5 du 9 juin 2026 relatif aux salaires minima",
+   "effet": "2026-06-09",
+   "statut": "automatique",
+   "le": "2026-11-25"
+  },
+  {
    "idcc": "2494",
    "type": "nouvel-accord",
    "avant": "Accord du 31 mars 2026 relatif aux salaires minima conventionnels au 1er avril 2026",
@@ -370,5 +415,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-24"
+ "verifie": "2026-11-25"
 }
