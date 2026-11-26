@@ -1,3 +1,10 @@
 {
-  "modifies": []
+  "modifies": [
+    {
+      "numero": "assurance-chomage",
+      "code": "regles",
+      "version": "a-verifier",
+      "depuis": null
+    }
+  ]
 }
