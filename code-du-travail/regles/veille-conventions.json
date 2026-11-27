@@ -1,6 +1,33 @@
 {
  "changements": [
   {
+   "idcc": "86",
+   "type": "nouvel-accord",
+   "avant": "Avenant du 19 mars 2025 relatif aux salaires minima conventionnels (annexe III de la convention)",
+   "apres": "Avenant du 7 septembre 2026 relatif aux salaires minima conventionnels (annexe III de la convention)",
+   "effet": "2026-09-07",
+   "statut": "automatique",
+   "le": "2026-11-27"
+  },
+  {
+   "idcc": "1286",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 43 du 23 janvier 2026 relatif aux salaires (annexe III de la convention collective)",
+   "apres": "Avenant n° 44 du 5 juin 2026 relatif aux salaires (annexe III de la convention collective)",
+   "effet": "2026-11-01",
+   "statut": "automatique",
+   "le": "2026-11-27"
+  },
+  {
+   "idcc": "7028",
+   "type": "nouvel-accord",
+   "avant": "Avenant n° 5 du 18 mars 2026 relatif aux salaires minima conventionnels (annexe 3 « Filière de teillage de lin et chanvre »)",
+   "apres": "Avenant n° 6 du 2 juillet 2026 relatif aux salaires minima conventionnels (annexe 1 « Filière fleurs, fruits, légumes frais et pommes de terre »)",
+   "effet": "2026-07-01",
+   "statut": "automatique",
+   "le": "2026-11-27"
+  },
+  {
    "idcc": "953",
    "type": "nouvel-accord",
    "avant": "Avenant n° 64 du 15 janvier 2026 relatif aux salaires au 1er janvier 2026",
@@ -415,5 +442,5 @@
    "le": "2026-10-31"
   }
  ],
- "verifie": "2026-11-26"
+ "verifie": "2026-11-27"
 }
